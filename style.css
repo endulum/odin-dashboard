@@ -68,7 +68,7 @@ h2 {
     text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
 }
 
-p, small {
+p, span, small {
     font-family: 'Roboto Light', Arial, Helvetica, sans-serif;
 }
 
@@ -76,7 +76,7 @@ small {
     font-size: 0.9rem;
 }
 
-p b {
+p b, span b, small b {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: normal;
 }
@@ -97,7 +97,13 @@ p b {
     position: sticky;
     top: 20px;
     display: grid;
+    grid-template-rows: min-content;
     gap: 20px;
+    height: calc(100% - 20px);
+}
+
+.sidebar {
+    max-width: 300px;
 }
 
 .card {
@@ -115,12 +121,31 @@ p b {
 }
 
 .announcements {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 10px;
 }
 
 .announcement + .announcement {
     padding-top: 10px;
     border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.announcement small {
+    width: calc(100%);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.trends {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.trend-pfp {
+    width: 50px;
+    height: 50px;
 }
