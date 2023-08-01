@@ -9,22 +9,59 @@
 </head>
 
 <body>
-    <aside ?>
+    <aside>
 
     </aside>
 
     <main>
-        <header>
+        <header class="shadowed">
 
         </header>
-        <!-- UNDO FLAG -->
-        <div class="wrapper grid-wrapper" style="height: 2000px">
 
+        <div class="wrapper grid-wrapper">
+            <h2>Your Projects</h2>
+            <div class="grid"></div>
         </div>
+
         <div class="wrapper sidebar-wrapper">
-            
+            <div class="sidebar">
+                <h2>Announcements</h2>
+                <div class="card sidebar-card announcements">
+                    <div class="announcement">
+                        <p><b>Site Maintenance</b></p>
+                        <small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, aperiam. Dolor saepe ad eos provident.</small>
+                    </div>
+                    <div class="announcement">
+                        <p><b>Site Maintenance</b></p>
+                        <small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, aperiam. Dolor saepe ad eos provident.</small>
+                    </div>
+                    <div class="announcement">
+                        <p><b>Site Maintenance</b></p>
+                        <small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, aperiam. Dolor saepe ad eos provident.</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <h2>Trending</h2>
+                <div class="card sidebar-card">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis impedit repellendus consectetur fugiat quas alias non, eaque quaerat temporibus laborum.</p>
+                </div>
+            </div>
         </div>
     </main>
+
+    <script>
+        let count = 0;
+        while (count < 30) {
+            let div = document.createElement('div');
+            div.className = 'card project';
+            div.innerHTML = `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eligendi suscipit maxime impedit labore. Incidunt quam unde possimus veritatis quia.
+</p>`;
+            document.querySelector('.grid').appendChild(div);
+            count++;
+        } 
+    </script>
 </body>
 
 </html>

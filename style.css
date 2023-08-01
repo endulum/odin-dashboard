@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/RobotoCondensed.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url(./assets/RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url(./assets/Jost.ttf);
+}
+
+@font-face {
+    font-family: 'Jost Bold';
+    src: url(./assets/Jost-Bold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,27 +26,30 @@
 
 html, body {
     height: 100%;
+}
+
+body {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
 aside {
-    background-color: darkslategray;
+    background-color: lightslategray;
     width: 300px;
     height: 100%;
 }
 
 main {
-    background-color: lightgray;
+    background-image: url(./assets/rough.jpg);
     width: 100%;
-    height: inherit;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: start;
     align-items: start;
-    gap: 20px;
+    gap: 30px;
     padding-bottom: 20px;
     overflow: auto;
 }
@@ -37,17 +60,67 @@ header {
     height: 150px;
 }
 
-.wrapper {
-    border: 1px solid white;
+h2 {
+    font-family: 'Jost Bold', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+}
+
+p, small {
+    font-family: 'Roboto Light', Arial, Helvetica, sans-serif;
+}
+
+small {
+    font-size: 0.9rem;
+}
+
+p b {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 .grid-wrapper {
-    width: calc(100% - 360px);
-    margin-left: 20px;
+    width: calc(100% - 390px);
+    margin-left: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
 .sidebar-wrapper {
     width: 300px;
     position: sticky;
     top: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card, header {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.project {
+    border-left: 8px solid lightslategray;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement + .announcement {
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
 }
