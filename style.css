@@ -38,6 +38,22 @@ aside {
     background-color: lightslategray;
     width: 300px;
     height: 100%;
+    padding: 25px;
+}
+
+aside h2 { color: white; }
+
+.dash-links {
+    margin-top: 20px;
+    display: grid;
+    gap: 5px;
+}
+
+.dash-link {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
 }
 
 main {
