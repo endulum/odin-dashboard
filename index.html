@@ -70,16 +70,25 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </main>
 
     <script>
         let count = 0;
-        while (count < 30) {
+        while (count < 20) {
             let div = document.createElement('div');
             div.className = 'card project';
-            div.innerHTML = `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eligendi suscipit maxime impedit labore. Incidunt quam unde possimus veritatis quia.
-</p>`;
+            div.innerHTML = `
+                <div class="project-details">
+                    <p><b>Project Title</b></p>
+                    <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta neque dolores dicta aspernatur dolorem dolor tempora velit! Perferendis, ducimus autem!</small>
+                </div>
+                <div class="project-icons">
+                    <a class="project-icon" href="#">link</a>
+                    <a class="project-icon" href="#">link</a>
+                    <a class="project-icon" href="#">link</a>
+                </div>
+            `;
             document.querySelector('.grid').appendChild(div);
             count++;
         } 
