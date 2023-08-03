@@ -46,14 +46,22 @@ aside h2 { color: white; }
 .dash-links {
     margin-top: 20px;
     display: grid;
-    gap: 5px;
+    gap: 10px;
 }
 
 .dash-link {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: normal;
+    font-size: 1.15rem;
     text-decoration: none;
     color: white;
+    transition: padding-left 0.5s ease, border-left 0.5s ease;
+    border-left: 0px solid rgba(255,255,255,0);
+}
+
+.dash-link:hover {
+    border-left: 10px solid white;
+    padding-left: 5px;
 }
 
 main {
@@ -82,9 +90,10 @@ header {
 }
 
 .search {
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 10px;
 }
 
@@ -94,11 +103,19 @@ header {
 
 .search-field {
     width: 100%;
-    padding: 0 5px;
+    max-width: 400px;
+    padding: 8px 16px;
+    appearance: none;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 30px;
+}
+
+.search-field:focus-visible ~ .search-button  {
+    opacity: 1;
 }
 
 .greeting {
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 80px 1fr;
@@ -164,6 +181,10 @@ header {
     width: 100px;
     text-align: center;
     border-radius: 20px;
+}
+
+.pill:hover {
+    text-decoration: underline;
 }
 
 h3 {
@@ -272,4 +293,33 @@ p b, span b, small b {
 
 .project-icon + .project-icon {
     margin-left: 15px;
+}
+
+.pfp {
+    border-radius: 100%;
+}
+
+.project-svg {
+    max-width: 25px;
+    filter: invert(57%) sepia(25%) saturate(272%) hue-rotate(169deg) brightness(88%);
+}
+
+.project-svg:hover {
+    filter: none;
+}
+
+.ann-svg {
+    max-width: 20px;
+    margin-bottom: -4px;
+    opacity: 0.25;
+}
+
+.notif-bell {
+    width: 25px;
+    opacity: 0.25;
+}
+
+.search-svg {
+    width: 25px;
+    opacity: 0.25;
 }
